@@ -1,0 +1,135 @@
+ul {
+  margin: 0 0 15px;
+  padding-left: 22px;
+}
+
+li {
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+pre {
+  overflow-x: auto;
+  margin-top: 18px;
+  padding: 18px;
+  border-left: 4px solid #00d8ff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  line-height: 1.65;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  color: #d8f8ff;
+  white-space: pre;
+}
+
+.nota {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 4px solid #00d8ff;
+  border-radius: 8px;
+  background: rgba(0, 216, 255, 0.09);
+  line-height: 1.6;
+}
+
+.conceitos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.conceitos article,
+.comparacao > div {
+  padding: 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.conceitos h3,
+.comparacao h3 {
+  color: #00d8ff;
+  margin-bottom: 10px;
+}
+
+.conceitos p,
+.comparacao p {
+  margin-bottom: 0;
+}
+
+.grade-demo {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+}
+
+.grade-demo > div {
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  padding: 14px;
+  border-radius: 8px;
+  color: #10141a;
+  background: #00d8ff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.grade-basica {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grade-basica > div:nth-child(2n) {
+  background: #a8f0ff;
+}
+
+.grade-posicionada {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grade-posicionada .item-largo {
+  grid-column: span 2;
+  background: #ffd166;
+}
+
+.grade-responsiva {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 135px), 1fr));
+}
+
+.grade-responsiva > div:nth-child(even) {
+  background: #a8f0ff;
+}
+
+.comparacao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.referencia a {
+  color: #00d8ff;
+  text-underline-offset: 3px;
+}
+
+.referencia a:hover {
+  color: #c8f7ff;
+}
+
+@media (max-width: 520px) {
+  .grade-basica,
+  .grade-posicionada {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  pre {
+    padding: 14px;
+    font-size: 0.86rem;
+  }
+}
